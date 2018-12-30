@@ -163,3 +163,8 @@ if(UA_ENABLE_PUBSUB)
         add_example(tutorial_pubsub_subscribe pubsub/tutorial_pubsub_subscribe.c)
     endif()
 endif()
+
+if(UA_ENABLE_JSON_ENCODING)
+    include_directories(${PROJECT_SOURCE_DIR}/src)
+    add_example(ua2json json/ua2json.c)
+endif()
